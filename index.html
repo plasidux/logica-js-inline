@@ -9,21 +9,14 @@
     <H1>Lógica de Programação com Javascript</H1>
     <p>Meu primeiro Projeto utilizando VS Code,Git e Github.</p>
     <section>
+
         <!---criando á área da pagina para testar o primeiro exemplo de Javascript-->
         <h2>1- Variáveís, tipos e saída </h2>
 
-        <!--O botão possui o evento "onclick". Quando o usuário clicar no botão, o navegador irá procurar uma função chamada: exVariaveis() 
-        Portanto: 
-        BOTÃO 
-        ↓ 
-        onclick 
-        ↓ 
-        exVariaveis() 
-        ↓ 
-        executa o código da função-->
+        <!--executa o bloco de função exVariiveis-->
 
         <button onclick="exVariaveis()">
-            rodar exemplo
+            
         </button>
 
         <!--Este <div> será utilizado para mostrar o resultado na própria página.
@@ -36,24 +29,28 @@
     <!--javascript esta em "inline"-->
     <script>
 
-        /*function" cria uma função. A função é um bloco de código que só será executado quando for chamado. Neste exemplo: function exVariaveis() cria a função chamada "exVariaveis".
-         O botão chama essa função através de: onclick="exVariaveis()"
-          Portanto: BOTÃO ↓ 
-          exVariaveis() ↓
-           código da função */
-        function exVariaveis() { 
-            /* "const" cria uma variável cujo valor não será reatribuído posteriormente. Aqui: nome = "Lucas" "nome" é o nome da variável. "Lucas" é o valor armazenado nela. Tipo do valor: string String representa texto. */
-            const nome = "Lucas";
-            let idade = 29;
-            const estudante = true;
+       /* função e variáveis */
+        function exVariaveis() {   
 
+            /*const- nao pode ser reatribuida */
+            const nome = "Lucas";
+            const estudante = true;
+            /*let- permite que a variavel possa ser reatribuida */
+            let idade = 29;
+
+            /*reatributo - let */
             idade = idade + 1;
 
+            /* As crases permitem inserir variáveis
+                dentro do texto utilizando:${} */
             const mensagem = `Nome: ${nome}
             Idade: ${idade}
             Estudante: ${estudante}`;
 
+            /* Localiza o elemento que possui:id="resultado" e coloca a mensagem dentro dele */
             document.getElementById("resultado").textContent = mensagem;
+            
+            /* Exibe os valores no Console do navegador*/
             console.log("Nome:",nome);
             console.log("Idade:",idade);
             console.log("Estudante:",estudante);
