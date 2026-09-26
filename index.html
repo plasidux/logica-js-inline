@@ -11,18 +11,28 @@
     <section>
 
         <!---criando á área da pagina para testar o primeiro exemplo de Javascript-->
-        <h2>1- Variáveís, tipos e saída </h2>
+        <h2>1 - Variáveís, tipos e saída </h2>
 
-        <!--executa o bloco de função exVariiveis-->
-
+        <!--executa o bloco de função exVariaveis-->
         <button onclick="exVariaveis()">
-            
+            Executar exemplo
         </button>
 
         <!--Este <div> será utilizado para mostrar o resultado na própria página.
              Ele possui o ID: resultado Esse ID será localizado pelo JavaScript através de: document.getElementById("resultado")-->
 
         <div id="resultado"></div>
+
+    </section>
+
+    <section>
+        <!---->
+        <h2>2 - Entrada e Saída</h2>
+
+        <!--execulta a fução entradasaida-->
+        <button onclick="entradasaida()">
+            Executar exemplo
+        </button>
 
     </section>
 
@@ -49,11 +59,22 @@
 
             /* Localiza o elemento que possui:id="resultado" e coloca a mensagem dentro dele */
             document.getElementById("resultado").textContent = mensagem;
-            
+
             /* Exibe os valores no Console do navegador*/
             console.log("Nome:",nome);
             console.log("Idade:",idade);
             console.log("Estudante:",estudante);
+        }
+
+        /*entrada e saída*/
+        function entradasaida() {
+
+            /*prompt solicita uma informmaçõa ao usuario. O valor sera armazenado na variável "nome"*/
+            const nome = prompt("Digite seu nome:");
+            const idade = prompt("Digite usa idade:");
+            /*alert() apresenta uma mensagempara o usuário.*/
+            alert(`ola, ${nome}! seja bem-vindo.`);
+            alert(`idade: ${idade}.`);
         }
     </script>
 </body>
