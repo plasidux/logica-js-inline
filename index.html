@@ -8,8 +8,8 @@
 <body>
     <H1>Lógica de Programação com Javascript</H1>
     <p>Meu primeiro Projeto utilizando VS Code,Git e Github.</p>
-    <section>
 
+    <section>
         <!---criando á área da pagina para testar o primeiro exemplo de Javascript-->
         <h2>1 - Variáveís, tipos e saída </h2>
 
@@ -20,13 +20,11 @@
 
         <!--Este <div> será utilizado para mostrar o resultado na própria página.
              Ele possui o ID: resultado Esse ID será localizado pelo JavaScript através de: document.getElementById("resultado")-->
-
         <div id="resultado"></div>
 
     </section>
 
     <section>
-        <!---->
         <h2>2 - Entrada e Saída</h2>
 
         <!--execulta a fução entradasaida-->
@@ -34,6 +32,15 @@
             Executar exemplo
         </button>
 
+    </section>
+
+    <section>
+        <h2>3 - Condicional if / else</h2>
+
+        <!--função-->
+        <button onclick="condicional()">
+            verificar idade
+        </button>
     </section>
 
     <!--javascript esta em "inline"-->
@@ -75,6 +82,25 @@
             /*alert() apresenta uma mensagempara o usuário.*/
             alert(`ola, ${nome}! seja bem-vindo.`);
             alert(`idade: ${idade}.`);
+        }
+
+        function condicional() {
+            /*solicita a idade ao usuario. O prompt() retortna o valor digitado com texto*/
+            const idade = Number(prompt("Digite sua idade:"));
+            const nome = prompt("Digite seu nome aqui:");
+            
+            /*IF verifica uma condição.
+            >= significa "igual ou maior".
+            Se idade for maior ou igual a 18, o código dentro das chaves será executado.*/
+            if (idade>= 18 && nome === "lucas") {
+                alert("acesso autorizado.");
+            }
+
+            /* ELSE será executado quando a condição do IF for falsa.*/
+            else{
+                alert("acesso negado.");
+            }
+            
         }
     </script>
 </body>
