@@ -43,6 +43,24 @@
         </button>
     </section>
 
+    <section>
+        <h2>4 - Operador de lógico OU</h2>
+
+        <!--função-->
+        <button  onclick="operadorOU()">
+            verificar acesso
+        </button>
+    </section>
+
+    <section>
+        <h2>5 - Operador lógicos</h2>
+
+        <!--funçao-->
+        <button onclick="Operadores()">
+            verificar acesso
+        </button>
+    </section>
+
     <!--javascript esta em "inline"-->
     <script>
 
@@ -100,7 +118,31 @@
             else{
                 alert("acesso negado.");
             }
-            
+        }
+        function operadorOU() {
+
+            /*solicita a idade em forma numerica(number) ao usuario. O prompt() retorna o valoe digitado com o texto*/
+            const idade = Number(prompt("digite sua idade:"));
+            const autorizado = prompt("possui autorização? sim ou não");
+
+            /*Basta uma das condições ser verdadeira para o acesso ser permitido.*/
+            if (idade >= 18 || autorizado === "sim") {
+                alert("autorizado");
+            }
+            else {
+                alert("não autorizado");
+            }
+        }
+        function Operadores() {
+             const idade = Number(prompt("Digite sua idade:"));
+             const autorizado = prompt("possui autorizaçao? sim ou não:");
+
+             if (idade >= 18 && autorizado === "sim") {
+                alert("acesso autorizado");
+             }
+             else {
+                alert("não autorizado");
+             }
         }
     </script>
 </body>
