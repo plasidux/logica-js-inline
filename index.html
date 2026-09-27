@@ -71,7 +71,7 @@
     </section>
 
     <section>
-        <h2>7 - Operadores de comparação</h2>
+        <h2>7 - Operadores de comparação (==)</h2>
         
         <!--chamada de função compararidade-->
         <button onclick="compararidade()">
@@ -81,7 +81,7 @@
     </section>
 
     <section>
-        <h2>8 - Operador menor ou igual</h2>
+        <h2>8 - Operador menor ou igual (<=)</h2>
         
         <!--chama a função limitenota()-->
         <button onclick="limitenota()">
@@ -91,11 +91,21 @@
     </section>
 
     <section>
-        <h2>9 - Operador maior que</h2>
+        <h2>9 - Operador maior que (>)</h2>
 
         <!--chama a função nota maior()-->
         <button onclick="notamaior()">
             verificar nota 
+        </button>
+
+    </section>
+
+    <section>
+        <h2>10 - Operador diferente de (!==) </h2>
+
+        <!--chama a função senhaforte()-->
+        <button onclick="senhaforte()">
+        verificar senha 
         </button>
 
     </section>
@@ -236,6 +246,18 @@
             else {
                 alert("reprovado.")
             }
+        }
+        function senhaforte() {
+            const senha = prompt("digite sua senha:");
+
+            if (senha !== "javascript") {
+                alert ("acesso nao autorizado")
+            }
+
+            else {
+                alert("senha autorizada")
+            }
+
         }
     </script>
 </body>
