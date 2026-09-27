@@ -80,6 +80,26 @@
 
     </section>
 
+    <section>
+        <h2>8 - Operador menor ou igual</h2>
+        
+        <!--chama a função limitenota()-->
+        <button onclick="limitenota()">
+            verificar nota
+        </button>
+
+    </section>
+
+    <section>
+        <h2>9 - Operador maior que</h2>
+
+        <!--chama a função nota maior()-->
+        <button onclick="notamaior()">
+            verificar nota 
+        </button>
+
+    </section>
+
     <!--javascript esta em "inline"-->
     <script>
 
@@ -193,6 +213,28 @@
             }
             else {
                 alert("maior.")
+            }
+        }
+        function limitenota() {
+            const nota = Number(prompt("digite sua nota:"));
+            
+            /*if e menor ou igual a 5 = true*/
+            if(nota <= 5 ) {
+                alert ("nota baixa.")
+            }
+            else {
+                alert("nota alta.")
+            }
+        }
+        function notamaior() {
+            const nota = Number(prompt("digite sua nota:"))
+
+            /*if e maior que 7 = true*/
+            if (nota > 7) {
+                alert("aprovado.")
+            }
+            else {
+                alert("reprovado.")
             }
         }
     </script>
