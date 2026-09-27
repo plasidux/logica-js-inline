@@ -61,6 +61,15 @@
         </button>
     </section>
 
+    <section>
+        <h2>6 - Condicional else/ if</h2>
+
+        <!--funçõa-->
+        <button onclick="avaliacao()">
+            verificar nota
+        </button>
+    </section>
+
     <!--javascript esta em "inline"-->
     <script>
 
@@ -109,7 +118,8 @@
             
             /*IF verifica uma condição.
             >= significa "igual ou maior".
-            Se idade for maior ou igual a 18, o código dentro das chaves será executado.*/
+            Se idade for maior ou igual a 18, o código dentro das chaves será executado.
+             operador lógico / === se o texto for igaul */
             if (idade>= 18 && nome === "lucas") {
                 alert("acesso autorizado.");
             }
@@ -137,12 +147,29 @@
              const idade = Number(prompt("Digite sua idade:"));
              const autorizado = prompt("possui autorizaçao? sim ou não:");
 
-             if (idade >= 18 && autorizado === "sim") {
+             /*o operador lógico ! inverte a condiçao para o oposto a sua regra*/
+             if (idade >= 18 && !autorizado === "sim") {
                 alert("acesso autorizado");
              }
              else {
                 alert("não autorizado");
              }
+        }
+        function avaliacao() {
+             const nota = Number(prompt("digite sua nota:"));
+
+            if (nota >= 7) {
+                alert ("Aprovado.");
+
+            }
+            else if (nota >= 5) {
+                alert ("Recuperação.");
+
+            }
+            else {
+                alert ("Reprovado.");
+
+            }
         }
     </script>
 </body>
