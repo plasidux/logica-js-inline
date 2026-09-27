@@ -70,6 +70,16 @@
         </button>
     </section>
 
+    <section>
+        <h2>7 - Operadores de comparação</h2>
+        
+        <!--chamada de função compararidade-->
+        <button onclick="compararidade()">
+            verificar idade
+        </button>
+
+    </section>
+
     <!--javascript esta em "inline"-->
     <script>
 
@@ -119,7 +129,7 @@
             /*IF verifica uma condição.
             >= significa "igual ou maior".
             Se idade for maior ou igual a 18, o código dentro das chaves será executado.
-             operador lógico / === se o texto for igaul */
+             operador lógico / === igualdade / se texto for igual */
             if (idade>= 18 && nome === "lucas") {
                 alert("acesso autorizado.");
             }
@@ -162,6 +172,8 @@
                 alert ("Aprovado.");
 
             }
+
+            /*else if - adiciona uma terceira condiçao. */
             else if (nota >= 5) {
                 alert ("Recuperação.");
 
@@ -169,6 +181,18 @@
             else {
                 alert ("Reprovado.");
 
+            }
+        }
+        /*bloco da função COMPARARIDADE() */
+        function compararidade() {
+            const idade = Number(prompt("digite sua idade:"));
+
+            /*operador - < - transforma if = false e else = true .*/
+            if (idade < 18 ) {
+                alert("menor.");
+            }
+            else {
+                alert("maior.")
             }
         }
     </script>
