@@ -53,7 +53,7 @@
     </section>
 
     <section>
-        <h2>5 - Operador lógicos</h2>
+        <h2>5 - Operador lógico &&</h2>
 
         <!--funçao-->
         <button onclick="Operadores()">
@@ -62,7 +62,7 @@
     </section>
 
     <section>
-        <h2>6 - Condicional else/ if</h2>
+        <h2>6 - Condicional else if</h2>
 
         <!--funçõa-->
         <button onclick="avaliacao()">
@@ -71,7 +71,7 @@
     </section>
 
     <section>
-        <h2>7 - Operadores de comparação (==)</h2>
+        <h2>7 - Operadores de comparação </h2>
         
         <!--chamada de função compararidade-->
         <button onclick="compararidade()">
@@ -81,7 +81,7 @@
     </section>
 
     <section>
-        <h2>8 - Operador menor ou igual (<=)</h2>
+        <h2>8 - Operador menor ou igual</h2>
         
         <!--chama a função limitenota()-->
         <button onclick="limitenota()">
@@ -105,10 +105,28 @@
 
         <!--chama a função senhaforte()-->
         <button onclick="senhaforte()">
-        verificar senha 
+            verificar senha 
         </button>
+        </section>
 
-    </section>
+        <section>
+            <h2>11 - laço FOR</h2>
+
+            <!--chama o bloco de função contarFor()-->
+            <button onclick="contarFor()">
+                contar 1 a 5
+            </button>
+        </section>
+
+        <section>
+            <h2>12 - laço while</h2>
+            
+            <!--chama o bloco de função contarwhile-->
+            <button onclick="contarWhile()">
+                contar 5 a 1
+            </button>
+
+        </section>
 
     <!--javascript esta em "inline"-->
     <script>
@@ -188,7 +206,7 @@
              const autorizado = prompt("possui autorizaçao? sim ou não:");
 
              /*o operador lógico ! inverte a condiçao para o oposto a sua regra*/
-             if (idade >= 18 && !autorizado === "sim") {
+             if (idade >= 18 && autorizado === "sim") {
                 alert("acesso autorizado");
              }
              else {
@@ -239,7 +257,7 @@
         function notamaior() {
             const nota = Number(prompt("digite sua nota:"))
 
-            /*if e maior que 7 = true*/
+            /*if e maior que 7 = true . 7 = false*/
             if (nota > 7) {
                 alert("aprovado.")
             }
@@ -249,7 +267,8 @@
         }
         function senhaforte() {
             const senha = prompt("digite sua senha:");
-
+            
+            /*operador !== determina que o prompt seja igual ao valor armazenado em "senha" */
             if (senha !== "javascript") {
                 alert ("acesso nao autorizado")
             }
@@ -258,6 +277,25 @@
                 alert("senha autorizada")
             }
 
+        }
+        function contarFor() {
+            for(let i=1; i <= 5; i++) {
+                console.log(i);
+            }
+        }
+       function contarWhile() {
+ 
+            /*let volor cheio*/
+            let  i = 5
+
+            /*maior ou igual a um. verdadeiro*/
+            while(i >=1){
+                console.log(i);
+
+                /*vai subtrair 1 de 5 a cada ciclo. 0 se torna false(>=1)*/
+                i--;
+            
+            }
         }
     </script>
 </body>
