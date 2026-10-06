@@ -128,6 +128,178 @@
 
         </section>
 
+        <section>
+            <h2>13 - Arrays</h2>
+
+            <!--chama o bloco da função "mostrasFrutas()"-->
+            <button onclick="mostrarFrutas()">
+                mostrar frutas
+            </button>
+
+        </section>
+
+        <section>
+             <h2>14 - Alterando elementos do array</h2>
+
+            <!--chama o bloco da função alterasFrutas-->
+             <button onclick="alterarFrutas()">
+                 alterar fruta
+            </button>
+
+        </section>
+
+        <section>
+            <h2>15 - Adicionando elementos ao array</h2>
+
+            <!--chama a função adicionarFrutas()-->
+            <button onclick="adicionarFrutas()">
+                adicionar frutas
+            </button>
+        </section>
+
+        <section>
+            <h2>16 - Fuções e DOM</h2>
+            <!--JavaScript localiza o elemento pelo seu ID e altera seu conteúdo--> 
+            <p id="mensagem"></p>
+            
+            <!--chama a funcão mostrarMensagem()-->
+            <button onclick="mostrarMensagem()">
+                mostrar mensagem
+            </button>
+        </section>
+
+        <section>
+            <h2>17 - Função matematica com entrada de dados</h2>
+
+            <!--chama a função executarSomas()-->
+            <button onclick="executarSomas()">
+                somar números
+            </button>
+
+        </section>
+
+        <section>
+            <h2>18 - Mini-calculadora</h2>
+
+            <!--chama a função calculadora()-->
+            <button onclick="calculadora()">
+                abrir calculadora
+            </button>
+
+        </section>
+
+        <section>
+            <h2>19 - calculadora com DOM</h2>
+            
+            <!--ID: indentifica o elemento para o Javascript.
+             Type="Number": define o campo para entrada numerica.
+             placeholder: mostra a dica dentro do campo antes da digitação.-->
+            <input id="numero1Simples" type="number" placeholder="Primeiro número">
+            <input id="numero2Simples" type="number" placeholder="Segundo número">
+            
+            <!--chama a função somarDOM()-->
+            <button onclick="somarDOM()">
+                somar
+            </button>
+
+            <!--recebe o resultado produzido pelo Javascript-->
+            <p id="resultadoSimples"></p>
+
+        </section>
+
+        <section>
+            <h2>20 - Calculadora DOM completa</h2>
+
+            <input id="numero1" type="number" placeholder="Primeiro número">
+            <input id="numero2" type="number" placeholder="Segundo número">
+
+            <button onclick="somaRDOM()">
+                somar
+            </button>
+
+             <button onclick="subtrairDOM()">
+                subtrair
+             </button>
+
+            <button onclick="multiplicarDOM()">
+                multiplicar
+            </button>
+
+            <button onclick="dividirDOM()">
+                dividir
+            </button>
+
+            <p id="resultadocalculadora"></p>
+
+        </section>
+
+        <section>
+            <h2>21 - Mini-jogo de adivnhação</h2>
+
+            <!--chama a função gerarnumerosecreto()-->
+            <button onclick="gerarNumeroSecreto()">
+                gerar número secreto 
+            </button>
+        </section>
+        
+        <section>
+            <h2>22 - Jogo de adivinhação completo</h2>
+
+            <!--chama a função jogoadivinhaçao()-->
+            <button onclick="jogoAdivinhacao()">
+                jogar
+            </button>
+
+            <button onclick="reiniciarJogo()">
+                novo jogo
+            </button>
+        </section>
+
+        <H1>Exercícios entregaveis</H1>
+
+        <section>
+            <h2>Maior de dois números</h>
+
+            <button onclick="maiorNumero()">
+                compara números
+            </button>
+        </section>
+
+        <section>
+            <h2>Tabuada do 7</h2>
+            
+            <button onclick="tabuada7()">
+                mostrar tabuada
+            </button>
+        </section>
+
+        <section>
+            <h2>Nomes que comçam com A</h2>
+
+            <button onclick="filtrarNomes()">
+                filtrar nomes
+            </button>
+        </section>
+
+        <section>
+            <h2>Média de tres números</h2>
+
+            <button onclick="executarMedia()">
+                calcular média
+            </button>
+
+        </section>
+
+        <section>
+            <h2>Pôtencia</h2>
+
+            <button onclick="potencia()">
+                calcular potência
+            </button>
+
+        </section>
+
+
     <!--javascript esta em "inline"-->
     <script>
 
@@ -297,6 +469,308 @@
             
             }
         }
+        function mostrarFrutas() {
+
+            /*array. guarda diversos valores relacionados dentro de uma única variável */
+            const frutas = ["maçã","tomate","laranja","abacate","uva","goiaba"];
+
+            /*for. 
+             1-opção( i < 3 ;) padrão índice.
+             2-opção(usar a propriedade LENGTH. conta a quantidade de valores dentro da variável) */
+           for (let i = 0; i < frutas.length; i++ ) {
+            console.log(frutas[i]);
+
+           }
+        
+        }
+        function alterarFrutas() {
+            /*variável array*/
+            const frutas = ["banana","cereja","abacaxi"];
+
+            /*alteração de um elemento, array índice(0,1,2). índice 1 sera substituido por batata */
+            frutas[1] = "batata"; 
+
+            console.log(frutas);
+        }
+
+        function adicionarFrutas() {
+            /*variável array*/
+            const frutas = ["banana","cereja","abacaxi"];
+            
+            /*método push() adiciona um novo elemento ao final do array */
+            frutas.push("hortelam");
+
+            console.log(frutas);
+        }
+
+        function mostrarMensagem() {
+            document.getElementById("mensagem").textContent = "olá! Mensagem alterada pelo javaScript.";
+        }
+        
+        /*exemplo visto somente no F12-console */
+        function somas(a,b) {
+            return (a + b);
+        }
+        console.log(somas(5,8));
+
+        function executarSomas() {
+            /*variáveis com entrada*/
+            const a = Number(prompt("Digite o primeiro número:"));
+            const b = Number(prompt("Digite o segundo número:"));
+
+            /*variavel do resultado das somas*/
+            const resultado = somas (a, b);
+
+            /*alert. retorna o valor da variavel (resultado) para o usuario. uso ${} + `` */
+                alert(`Resultado: ${resultado}`);
+        }
+
+        function calculadora() {
+
+            /*variáveis*/
+            const a = Number(prompt("Digite o primeiro número:"));
+            const operador = prompt("Digite a operação: +, -, * ou /");
+            const b = Number(prompt("Digite o segundo número:"));
+            
+            /*let vai permitir que os valores do resultado possam ser reatribuidos  */
+            let resultado;
+            
+            /* IF e ELSE- trabalham com condições true or false . 
+            operador === compara o operador informado pelo usuario.
+            ELSE IF - adiciona mais camadas para a funcão .
+            */
+            if (operador === "+") {
+                resultado = a + b;
+            }
+            else if (operador === "-") {
+                resultado = a - b;
+            }
+            else if (operador === "*") {
+                resultado = a * b;
+            }
+            else if (operador === "/") {
+
+                /*if aninhado: condição dentro da condição, torna a divisão por 0 invalida.
+                 return encerra a função  */
+                if (b === 0) {
+                    alert(" não é possível dividir por zero.");
+                    return;
+                }
+                resultado = a / b;
+            }
+            else {
+                alert("operação invalida.");
+                return;
+            }
+
+            /*apresenta os resultados*/
+            alert(`resultado: ${resultado}`);
+
+        }
+
+        function somarDOM() {
+            
+            /*value pega o valor que o usuario digitou no input.
+            Number() transforma esse valor de texto em número.*/
+            const a = Number(document.getElementById("numero1Simples").value);
+            const b = Number(document.getElementById("numero2Simples").value);
+
+            /*realiza a soma dos dois valores*/
+            const resultado = a + b ;
+
+            /*localiza o elemento pelo ID e altera seu conteudo*/
+            document.getElementById("resultadoSimples").textContent = 
+            `resultado: ${resultado}`;
+        }
+
+        function somaRDOM() {
+
+            /*pega os valores digitados nos inpts*/
+            const a = Number(document.getElementById("numero1").value);
+            const b = Number(document.getElementById("numero2").value);
+
+            /*realiza o calculo*/
+            const resultado = a + b;
+
+            /*apresenta o resultado na pagina */
+            document.getElementById("resultadocalculadora").textContent = 
+            `resultado: ${resultado}`;
+        }
+         function subtrairDOM() {
+            const a = Number(document.getElementById("numero1").value);
+            const b = Number(document.getElementById("numero2").value);
+
+            const resultado = a - b;
+
+            document.getElementById("resultadocalculadora").textContent = 
+            `resultado: ${resultado}`;
+
+         }
+         function multiplicarDOM() {
+            const a = Number(document.getElementById("numero1").value);
+            const b = Number(document.getElementById("numero2").value);
+
+            const resultado = a * b;
+
+            document.getElementById("resultadocalculadora").textContent = 
+            `resultado: ${resultado}`;
+         }
+         function dividirDOM() {
+            const a = Number(document.getElementById("numero1").value);
+            const b = Number(document.getElementById("numero2").value);
+
+            /*verifica se o divisor é zero*/
+            if (b===0){
+                document.getElementById("resultadocalculadora").textContent = 
+                "não e possivel dividir por zero.";
+                return;
+            }
+
+            const resultado = a / b;
+
+            document.getElementById("resultadocalculadora").textContent = 
+            `resultado: ${resultado}`; 
+        }
+
+        function gerarNumeroSecreto() {
+
+            /*gera um número aleatório entre 1 e 10*/
+            const numerosecreto = Math.floor(Math.random() * 10) + 1;
+
+            console.log(numerosecreto);
+        }
+
+          /*gera um número aleatório entre 1 e 10*/
+            let numeroSecreto = Math.floor(Math.random() *10) +1;
+
+            /*contador de tentativas*/
+            let tentativas = 0
+
+        function jogoAdivinhacao() {
+
+            /*recebe o palpite do usuário e transforma em número*/
+            const palpite = Number(prompt("Adivinhe o númro secreto de 1 a 10:"));
+
+            tentativas++;
+
+            /*compara o palpite com o número secreto*/
+            if (palpite === numeroSecreto) {
+                alert (`você ACERTOU! em ${tentativas} tentativas.`);
+            }
+
+            /*verifica se o palpite é menor que o número secreto*/
+            else if (palpite < numeroSecreto) {
+                alert(`você errou. o número secreto e maior que ${palpite}.`);
+            }
+
+            else {
+                alert(`você errou. o número secreto era ${numeroSecreto}.`);
+            }
+
+        }
+
+        function reiniciarJogo() {
+
+             /* gera um novo número secreto */
+            numeroSecreto = Math.floor(Math.random() * 10) + 1;
+
+            /* começa novamente a contagem */
+            tentativas = 0
+            
+            alert("Novo jogo iniciado!");
+
+            }
+
+        function maiorNumero() {
+
+            /* recebe o primeiro número */
+            const a = Number(prompt("Digite o primeiro número:"));
+
+             /* recebe o segundo número */
+            const b = Number(prompt("Digite o segundo número:"));
+
+             /* compara os dois números */
+            if (a > b) {
+            alert(`O maior número é ${a}.`);
+            }
+
+            else if (b > a) {
+            alert(`O maior número é ${b}.`);
+            }
+
+            else {
+            alert("Os dois números são iguais."); 
+            }
+
+        }
+
+        function tabuada7() {
+
+            /* repete a operação de 1 até 10 */
+            for (let i = 1; i <= 10; i++) {
+
+                /* calcula a multiplicação */
+                const resultado = 7 * i;
+
+                /* mostra cada resultado no console */
+                console.log(`7 x ${i} = ${resultado}`);
+            }
+        }
+
+        function filtrarNomes() {
+
+             /* array com os nomes */
+            const nomes = ["Ana","Lucas","Amanda","Carlos","Arthur","Bruno"];
+
+             /* percorre todos os nomes do array */
+            for (let i = 0; i < nomes.length; i++) {
+
+                /* verifica se o nome começa com a letra A */
+            if (nomes[i].startsWith("A")){
+
+                console.log(nomes[i]);
+                }
+            }
+        }
+
+        function calcularMedia(a, b, c) {
+
+             /* calcula a média dos três valores */
+            const media = (a + b + c) / 3;
+
+            /* retorna o resultado para quem chamou a função */
+            return media;
+        }
+
+        function executarMedia() {
+
+            /* recebe os três números */
+            const a = Number(prompt("digite o primeiro número:"));
+            const b = Number(prompt("digite o segundo número:"));
+            const c = Number(prompt("digite o terceiro número:"));
+
+            /* chama a função calcularMedia() */
+            const resultado = calcularMedia(a, b, c);
+
+            alert(`A media é: ${resultado}`);
+        }
+
+        function potencia() {
+
+            /* recebe a base */
+            const base = Number(prompt("digte a base:"));
+
+            /* recebe o expoente */
+            const expoente = Number(prompt("digte a expoente:"));
+
+            /* calcula a potência */
+            const resultado = base ** expoente;
+
+             /* mostra o resultado */
+             alert(`resultado: ${resultado}`);
+
+        }
+
     </script>
 </body>
 </html>
